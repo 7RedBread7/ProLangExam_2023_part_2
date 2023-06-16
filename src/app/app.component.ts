@@ -10,7 +10,7 @@ export class AppComponent {
   teachers: any[] = [];
 
   constructor(private teacherService: TeacherService) {
-    this.teachers = teacherService.getTeachers();
+    this.teacherService.get_teachers().subscribe(x => this.teachers = x);
   }
 
 }
